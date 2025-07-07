@@ -717,7 +717,25 @@ a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-menu {
-      display: none;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 15, 35, 0.98);
+    z-index: 2000;
+    gap: 2.5rem;
+  }
+  .nav-menu.show {
+    display: flex !important;
+  }
+  .nav-link {
+    font-size: 2rem;
+    padding: 1rem 0;
   }
   
   .hamburger {
@@ -1130,11 +1148,23 @@ a:hover {
   text-align: center;
 }
 
+.hero-text h1 {
+  text-align: center;
+}
+
 .hero-image {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hero-text h1 .highlight {
+  color: var(--primary-color) !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
 }
 
 @media (max-width: 900px) {
@@ -1146,4 +1176,88 @@ a:hover {
     min-height: 60vh;
     padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
   }
+}
+
+/* Lesbare Schriftfarbe für <select> und <option> im Kontaktformular */
+.contact-form select, .contact-form option {
+  color: var(--text-primary);
+  background: rgba(15, 15, 35, 0.95);
+}
+
+.contact-form select:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+/* Glow-Effekt für Name im Hero */
+.hero-text h1 .highlight {
+  color: var(--primary-color) !important;
+  text-shadow: 0 0 16px #00d4ff, 0 0 32px #00d4ff44;
+}
+
+/* Sanfte Schatten und Hover-Animationen für Cards */
+.project-card, .skill-card, .contact-card, .faq-item {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.project-card:hover, .skill-card:hover, .contact-card:hover, .faq-item:hover {
+  box-shadow: 0 8px 32px 0 #00d4ff33, 0 2px 8px 0 #0002;
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* Buttons: Glow beim Hover */
+.btn-primary:hover, .btn-outline:hover {
+  box-shadow: 0 0 16px #00d4ff99, 0 2px 8px #0002;
+  filter: brightness(1.1);
+}
+
+/* Fade-in Animation für Hauptbereiche */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: none; }
+}
+.hero, .skills, .featured-projects, .newsletter, .faq, .contact-content {
+  animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1) both;
+}
+
+/* Parallax-ähnlicher Effekt für das Hero-Bild */
+.hero-image {
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+/* Floating-Animation für die Profilkarte */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+.profile-card {
+  animation: float 3.5s ease-in-out infinite;
+}
+
+/* Wobble-Animation für Skill-Icons beim Hover */
+@keyframes wobble {
+  0% { transform: rotate(0deg) scale(1); }
+  20% { transform: rotate(-8deg) scale(1.1); }
+  40% { transform: rotate(8deg) scale(1.1); }
+  60% { transform: rotate(-4deg) scale(1.05); }
+  80% { transform: rotate(4deg) scale(1.05); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+.skill-icon:hover {
+  animation: wobble 0.7s;
+}
+
+#bg-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  display: block;
+}
+body, .header, main, footer {
+  position: relative;
+  z-index: 1;
 }
