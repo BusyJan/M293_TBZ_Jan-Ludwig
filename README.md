@@ -41,11 +41,28 @@ Dies ist mein persönliches Portfolio, das ich im Rahmen des Moduls M293 erstell
 - Alle Inhalte und Bilder sind passend und optimiert
 
 ## Links
-- **Live-Seite:** [DEINE-URL-HIER]()  
+- **Live-Seite:** [DEINE-URL-HIER](https://busyjan.github.io/M293_TBZ_Jan-Ludwig/)  
 - **Repository:** [GitHub Repo](https://github.com/BusyJan/M293_TBZ_Jan-Ludwig)
 
 ## Wireframes & Styleguide
 - Wireframes und Styleguide findest du im Ordner `/doku` im Repository.
+
+## Projektstruktur (Folder Structure)
+
+```plaintext
+Projekt/
+├── index.html
+├── projects.html
+├── project-detail.html
+├── about.html
+├── contact.html
+├── styles.css
+├── script.js
+├── README.md
+├── doku/
+│   ├── wireframes.pdf
+│   └── styleguide.md
+```
 
 ---
 
