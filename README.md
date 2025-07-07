@@ -12,6 +12,7 @@ Dies ist mein persönliches Portfolio, das ich im Rahmen des Moduls M293 erstell
 - Responsive Design für Desktop, Tablet und Handy
 - Moderne Optik mit Grid- und Flexbox-Layouts
 - Filterfunktion und Navigation mit JavaScript
+- Animierter, interaktiver Sternenhimmel-Partikelhintergrund (verschiedene Farben und Größen)
 
 ## Technologien
 - HTML5
@@ -39,6 +40,7 @@ Dies ist mein persönliches Portfolio, das ich im Rahmen des Moduls M293 erstell
 - Komplett ohne Frameworks, nur mit HTML, CSS und JavaScript
 - Fokus auf Design, Übersichtlichkeit und Benutzerfreundlichkeit
 - Alle Inhalte und Bilder sind passend und optimiert
+- Moderner Partikelhintergrund: Interaktiver, animierter Sternenhimmel mit Maus-Interaktion
 
 ## Links
 

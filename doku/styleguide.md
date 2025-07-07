@@ -46,6 +46,14 @@
 - **Navigation:** Hamburger-Menü auf kleinen Bildschirmen
 - **Buttons und Eingabefelder:** Immer gut lesbar und groß genug
 
+## Partikelhintergrund (Sternenhimmel)
+- Animierter, interaktiver Sternenhimmel als Canvas-Overlay
+- Viele kleine und wenige große Partikel (Sterne), verschiedene Größen
+- Farben: Weiß, Hellblau, Blasslila, Blassgelb (wie echte Sterne)
+- Dezente Verbindungslinien zwischen kleinen Partikeln
+- Interaktion: Partikel werden von der Maus abgestoßen, beim Klicken zur Maus hingezogen
+- Smooth, performant und auf allen Bildschirmgrößen sichtbar
+
 ## Sonstiges
 - **Icons:** Unicode-Emojis für Skills und Kontaktinfos
 - **Transitions:** Sanfte Übergänge bei Hover-Effekten
