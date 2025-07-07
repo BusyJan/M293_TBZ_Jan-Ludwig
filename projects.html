@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekte - Jan Ludwig Portfolio</title>
+    <meta name="description" content="Alle Projekte von Jan Ludwig - Gaming, Coding, Musik und Schulprojekte">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2><a href="index.html">Jan Ludwig</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link active">Projekte</a></li>
+                <li><a href="about.html" class="nav-link">Über mich</a></li>
+                <li><a href="contact.html" class="nav-link">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="projects-page">
+        <section class="page-header">
+            <div class="container">
+                <h1>Meine Projekte</h1>
+                <p>Eine Übersicht aller meiner Projekte aus den Bereichen Gaming, Coding, Musik und Schule</p>
+            </div>
+        </section>
+
+        <!-- Filter Buttons -->
+        <section class="filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Alle</button>
+                    <button class="filter-btn" data-filter="coding">Coding</button>
+                    <button class="filter-btn" data-filter="gaming">Gaming</button>
+                    <button class="filter-btn" data-filter="musik">Musik</button>
+                    <button class="filter-btn" data-filter="schule">Schule</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-gallery">
+            <div class="container">
+                <div class="projects-grid">
+                    <!-- Coding Projects -->
+                    <article class="project-card" data-category="coding">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop" alt="Portfolio Website">
+                        <div class="project-content">
+                            <span class="project-category">Coding</span>
+                            <h3>Personal Portfolio</h3>
+                            <p>Responsive Website mit HTML5, CSS3 und JavaScript. Feature-rich mit Kontaktformular und Newsletter.</p>
+                            <!-- Details-Link entfernt -->
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="coding">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop" alt="JavaScript Calculator">
+                        <div class="project-content">
+                            <span class="project-category">Coding</span>
+                            <h3>JavaScript Taschenrechner</h3>
+                            <p>Vollständiger Taschenrechner mit erweiterten Funktionen und Speicher-Features.</p>
+                            <!-- Details-Link entfernt -->
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="coding">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop" alt="Python Automatisierung">
+                        <div class="project-content">
+                            <span class="project-category">Coding</span>
+                            <h3>Python Automatisierung</h3>
+                            <p>Scripts für die Automatisierung täglicher Aufgaben und Datenverarbeitung.</p>
+                            <!-- Details-Link entfernt -->
+                        </div>
+                    </article>
+
+                    <!-- Gaming Projects -->
+                    <article class="project-card" data-category="gaming">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=250&fit=crop" alt="Minecraft Plugin">
+                        <div class="project-content">
+                            <span class="project-category">Gaming</span>
+                            <h3>Minecraft Server Plugin</h3>
+                            <p>Custom Plugin für Multiplayer-Server mit Java. Erweiterte Gameplay-Mechaniken.</p>
+                            <!-- Details-Link entfernt -->
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="gaming">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop" alt="Game Mods">
+                        <div class="project-content">
+                            <span class="project-category">Gaming</span>
+                            <h3>Schedule 1 Mod Pack</h3>
+                            <p>Selbst entwickelte Mod-Sammlung für Schedule 1 mit Performance-Optimierungen.</p>
+                            <!-- Details-Link entfernt -->
+                        </div>
+                    </article>
+
+                    <!-- Music Projects -->
+                    <article class="project-card" data-category="musik">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop" alt="FL Studio Beats">
+                        <div class="project-content">
+                            <span class="project-category">Musik</span>
+                            <h3>Electronic Beat Pack</h3>
+                            <p>Sammlung selbstproduzierter elektronischer Beats mit FL Studio.</p>
+                            <!-- Details-Link entfernt -->
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="musik">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=250&fit=crop" alt="Remix Project">
+                        <div class="project-content">
+                            <span class="project-category">Musik</span>
+                            <h3>Gaming Soundtrack Remix</h3>
+                            <p>Remixe bekannter Gaming-Soundtracks mit modernen Electronic-Elementen.</p>
+                            <!-- Details-Link entfernt -->
+                        </div>
+                    </article>
+
+                    <!-- School Projects -->
+                    <article class="project-card" data-category="schule">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop" alt="M293 Projekt">
+                        <div class="project-content">
+                            <span class="project-category">Schule</span>
+                            <h3>M293 Web-Portfolio</h3>
+                            <p>Dieses Portfolio-Projekt für das Modul M293 mit KI-Dokumentation.</p>
+                            <!-- Details-Link entfernt -->
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="schule">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop" alt="Noser Young Projekt">
+                        <div class="project-content">
+                            <span class="project-category">Schule</span>
+                            <h3>Noser Young Challenge</h3>
+                            <p>Team-Projekt während des Basislehrjahrs mit innovativer Problemlösung.</p>
+                            <!-- Details-Link entfernt -->
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="coding schule">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop" alt="Google Internship">
+                        <div class="project-content">
+                            <span class="project-category">Schule</span>
+                            <h3>Google Lehrprojekt</h3>
+                            <p>Praktische Anwendung von Web-Technologien im Google-Lehrumfeld.</p>
+                            <!-- Details-Link entfernt -->
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jan Ludwig</h3>
+                    <p>1. Lehrjahr bei Google<br>Basislehrjahr bei Noser Young</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p>E-Mail: jan.ludwig@example.com<br>LinkedIn: /in/janludwig</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Projekte</h3>
+                    <p>GitHub: github.com/janludwig<br>Portfolio: janludwig.dev</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jan Ludwig. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

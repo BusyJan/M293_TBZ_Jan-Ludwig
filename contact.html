@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Jan Ludwig Portfolio</title>
+    <meta name="description" content="Kontaktiere Jan Ludwig für Projekte, Fragen oder Zusammenarbeit">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2><a href="index.html">Jan Ludwig</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projekte</a></li>
+                <li><a href="about.html" class="nav-link">Über mich</a></li>
+                <li><a href="contact.html" class="nav-link active">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="page-header">
+            <div class="container">
+                <h1>Kontakt</h1>
+                <p>Lass uns über dein Projekt sprechen oder einfach Hallo sagen!</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <h2>Nachricht senden</h2>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">E-Mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Betreff *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Bitte wählen</option>
+                                    <option value="projekt">Frage zum Projekt</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="musikauftrag">Musikauftrag</option>
+                                    <option value="zusammenarbeit">Zusammenarbeit</option>
+                                    <option value="sonstiges">Sonstiges</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Nachricht *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    Ich stimme der Verarbeitung meiner Daten zu
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Nachricht senden</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h2>Kontaktinformationen</h2>
+                        
+                        <div class="contact-card">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <div>
+                                    <h3>E-Mail</h3>
+                                    <p>jan.ludwig999@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <span class="contact-icon">☎️</span>
+                                <div>
+                                    <h3>Telefon</h3>
+                                    <p>+41 78 903 43 53</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <span class="contact-icon">💻</span>
+                                <div>
+                                    <h3>GitHub</h3>
+                                    <p>github.com/busyjan</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <span class="contact-icon">🏢</span>
+                                <div>
+                                    <h3>Ausbildung</h3>
+                                    <p>Google Lehre bei Noser Young</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="availability">
+                            <h3>Verfügbarkeit</h3>
+                            <div class="status">
+                                <span class="status-dot available"></span>
+                                <span>Verfügbar für neue Projekte</span>
+                            </div>
+                            <p>Beste Antwortzeit: 24-48 Stunden</p>
+                        </div>
+
+                        <div class="social-links">
+                            <h3>Social Media</h3>
+                            <div class="social-buttons">
+                                <a href="#" class="social-btn">Discord</a>
+                                <a href="#" class="social-btn">Twitter</a>
+                                <a href="#" class="social-btn">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2>Häufige Fragen</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Welche Art von Projekten machst du?</h3>
+                        <p>Ich arbeite an Web-Entwicklung, Gaming-Projekten, Musikproduktion und Schulprojekten. Besonders interessiert bin ich an innovativen Tech-Lösungen.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Bietest du Musikproduktion an?</h3>
+                        <p>Ja! Ich produziere Beats und Musik mit FL Studio. Kontaktiere mich gerne für Custom-Produktionen oder Remix-Aufträge.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Wie lange dauert ein Projekt?</h3>
+                        <p>Das hängt vom Umfang ab. Kleinere Projekte können binnen einer Woche fertig sein, größere Projekte benötigen mehr Zeit. Gerne erstelle ich dir einen individuellen Zeitplan.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Arbeitest du remote?</h3>
+                        <p>Ja, die meisten Projekte können remote durchgeführt werden. Für lokale Schweizer Projekte bin ich auch gerne vor Ort verfügbar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jan Ludwig</h3>
+                    <p>1. Lehrjahr bei Google<br>Basislehrjahr bei Noser Young</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p>E-Mail: jan.ludwig@example.com<br>LinkedIn: /in/janludwig</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Projekte</h3>
+                    <p>GitHub: github.com/janludwig<br>Portfolio: janludwig.dev</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jan Ludwig. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
