@@ -120,6 +120,65 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // Sternschnuppen-Logik
+  let shootingStar = null;
+  let nextStarTime = Date.now() + 3000 + Math.random() * 5000;
+
+  function spawnShootingStar() {
+    // Startet an zufälliger Position auf dem Bildschirm
+    const startX = Math.random() * w;
+    const startY = Math.random() * h;
+    // Nach links geneigte Richtung, zufällige Steigung
+    const angle = (-Math.PI / 3) + (Math.random() - 0.5) * 0.5; // -60° plus etwas Variation
+    const speed = 6 + Math.random() * 2.5;
+    shootingStar = {
+      x: startX,
+      y: startY,
+      dx: Math.cos(angle) * speed,
+      dy: Math.sin(angle) * speed,
+      trail: [],
+      life: 0,
+      maxLife: 18 + Math.random() * 8,
+      radius: 1.2 + Math.random() * 0.9
+    };
+  }
+
+  function drawShootingStar() {
+    if (!shootingStar) return;
+    // Trail speichern
+    shootingStar.trail.unshift({ x: shootingStar.x, y: shootingStar.y });
+    if (shootingStar.trail.length > 12) shootingStar.trail.pop();
+    // Trail zeichnen
+    for (let i = shootingStar.trail.length - 1; i > 0; i--) {
+      const p1 = shootingStar.trail[i];
+      const p2 = shootingStar.trail[i - 1];
+      ctx.save();
+      ctx.globalAlpha = 0.08 + 0.12 * (i / shootingStar.trail.length);
+      ctx.strokeStyle = '#fff';
+      ctx.lineWidth = 1.1 - i * 0.07;
+      ctx.beginPath();
+      ctx.moveTo(p1.x, p1.y);
+      ctx.lineTo(p2.x, p2.y);
+      ctx.stroke();
+      ctx.restore();
+    }
+    // Kopf zeichnen
+    ctx.save();
+    ctx.globalAlpha = 0.85;
+    ctx.beginPath();
+    ctx.arc(shootingStar.x, shootingStar.y, shootingStar.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = '#fff';
+    ctx.shadowColor = '#fff';
+    ctx.shadowBlur = 10;
+    ctx.fill();
+    ctx.restore();
+    // Bewegung
+    shootingStar.x += shootingStar.dx;
+    shootingStar.y += shootingStar.dy;
+    shootingStar.life++;
+    if (shootingStar.life > shootingStar.maxLife) shootingStar = null;
+  }
+
   function draw() {
     ctx.clearRect(0, 0, w, h);
     drawLines();
@@ -160,6 +219,12 @@ document.addEventListener('DOMContentLoaded', function() {
       if (p.x > w) p.x = 0;
       if (p.y < 0) p.y = h;
       if (p.y > h) p.y = 0;
+    }
+    // Sternschnuppe ggf. zeichnen
+    if (shootingStar) drawShootingStar();
+    if (!shootingStar && Date.now() > nextStarTime) {
+      spawnShootingStar();
+      nextStarTime = Date.now() + 3000 + Math.random() * 5000;
     }
     requestAnimationFrame(draw);
   }
